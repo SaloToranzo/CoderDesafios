@@ -47,6 +47,12 @@ header{
         font-size: 1.5rem;
     }
 
+    /*transformaciones menu*/
+    nav ul li:hover{
+        transform: scale(1.2);
+        text-decoration: underline;
+    }
+
 
 a{
     text-decoration: none;
@@ -79,6 +85,7 @@ a{
         flex-direction: column;
         align-self: auto;
         padding: 2rem;
+        margin: 0.5rem;
         border: solid 0.5rem red;
         border-radius: 100px;
         color: white;
@@ -177,6 +184,16 @@ a{
     object-fit: contain;
     height: auto;
 }
+    /*transformaciones img side*/
+    .calendarioIndex:hover{
+        transform: scale(1.5);
+        transition: 1s;
+    }
+
+    .sorteo:hover{
+        transform: scale(1.5);
+        transition: 1s;
+    }
 
 footer{
     width: 100vw;
@@ -199,6 +216,11 @@ footer{
     .redes{
         height: 2rem;
     }
+
+        /*transformaciones redes*/
+        .redes:hover{
+            transform: scale(1.2);
+        }
 
 /*MEDIA QUERIES*/
 
