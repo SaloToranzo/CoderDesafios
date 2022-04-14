@@ -114,6 +114,30 @@ a{
         text-align: center;
     }
 
+.side{
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+    
+    .calendarioIndex, .sorteo{
+        object-fit: contain;
+        height: auto;
+    }
+        /*transformaciones img side*/
+        .calendarioIndex:hover{
+            transform: scale(1.5);
+            transition: 1s;
+        }
+    
+        .sorteo:hover{
+            transform: scale(1.5);
+            transition: 1s;
+        }
+
 .divBodyNotas, .divBodyCalendarios, .divBodyDisciplinas, .divBodyEquipo{
     background-color: grey;
 }
@@ -128,6 +152,7 @@ a{
     .notasTitulo, .tituloFutbol, .tituloBasquet, .disciplinasTitulo{
         margin: 1rem;
         font-size: 2rem;
+        color: black;
         font-family: 'Bebas Neue', cursive;
     }
     
@@ -153,6 +178,27 @@ a{
         height: auto;
     }
 
+ol{
+    list-style: none;
+}
+    ol li{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .hover:hover + .hide{
+        display: block;
+    }
+
+    .hover{
+        border-radius: 1rem;
+        background-color: whitesmoke;
+    }
 
 .calendarioPages{
         display: flex;  
@@ -169,44 +215,24 @@ a{
     }
 
 
-
-.side{
-    grid-area: side;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    
-}
-
-.calendarioIndex, .sorteo{
-    object-fit: contain;
-    height: auto;
-}
-    /*transformaciones img side*/
-    .calendarioIndex:hover{
-        transform: scale(1.5);
-        transition: 1s;
-    }
-
-    .sorteo:hover{
-        transform: scale(1.5);
-        transition: 1s;
-    }
-
-footer{
+.footerInicio, .footerNotas, .footerDisciplinas, .footerEquipo{
     width: 100vw;
-    grid-area: footer;
     border-top: solid 0.7rem whitesmoke;
     padding: 2rem;
     background-color: #e0040b;
+    grid-area: footer;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
     align-items: flex-end;
     align-content: space-between;
     gap: 1rem;
+}
+
+footer{
+    border-top: solid 0.7rem whitesmoke;
+    padding: 2rem;
+    background-color: #e0040b;
 }
 
     .footerLogo{
@@ -293,9 +319,7 @@ footer{
         justify-content: center;
         gap: 1rem;
     }
-
-
-    
+   
     .equipoMiembros{
         margin: 3rem;
         padding: 1.2rem;
