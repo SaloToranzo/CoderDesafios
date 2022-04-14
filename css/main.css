@@ -187,17 +187,14 @@ ol{
         font-size: 1rem;
     }
 
-    .hide{
-        display: none;
-    }
-
-    .hover:hover + .hide{
-        display: block;
-    }
-
-    .hover{
+    .fecha{
         border-radius: 1rem;
         background-color: whitesmoke;
+    }
+
+    .card:hover{
+        transform: scale(2.5);
+        transition: 1s;
     }
 
 .calendarioPages{
