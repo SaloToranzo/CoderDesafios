@@ -52,20 +52,12 @@ a{
         transform: scale(1.5);
         transition: 1s;
     }
-
-ol{
-    list-style: none;
-}
-    ol li{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size: 1rem;
-    }
     
-    .fecha{
-        border-radius: 1rem;
-        background-color: whitesmoke;
-    }
+.fecha{
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+}
     
     /*transformacion fixture*/
     .card:hover{
