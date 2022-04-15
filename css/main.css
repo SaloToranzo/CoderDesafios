@@ -52,6 +52,10 @@ a{
         transform: scale(1.5);
         transition: 1s;
     }
+
+    .calendarioIndexSm, .sorteoSm{
+        height: 7rem;
+    }
     
 .fecha{
     font-family: 'Bebas Neue', cursive;
