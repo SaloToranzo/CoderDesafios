@@ -1,0 +1,23 @@
+@import "utilities/variables";
+@import "layout/nav";
+
+.divBodyIndex{
+    .calendarioIndex, .sorteo{
+        object-fit: contain;
+        height: 15rem;
+        /*tranformaciones side*/
+        &:hover{
+            transform: scale(1.5);
+            transition: 1s;
+        }  
+    .calendarioIndexSm, .sorteoSm{
+            height: 7rem;
+        }    
+    }
+}
+
+
+
+.divBodyNotas, .divBodyCalendarios, .divBodyDisciplinas, .divBodyEquipo{
+    background-color: $colorFondo;
+}

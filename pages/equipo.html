@@ -9,133 +9,132 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <!--FIN GOOGLE FONTS-->
+
+    <!--LINK ANIMATE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
+    <!--LINK BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <!--LINK CSS-->
     <link rel="stylesheet" href="../css/main.css"> 
-    
     
     <title>Equipo de Estacion</title>
 </head>
 
 <body>
-
     <div class="divBodyEquipo">
-
         <!--INICIO HEADER-->
-        <header>
+        <header class="row p-2">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/logo.png" alt="logo" class="img-fluid animate__animated animate__fadeInLeft">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item justify">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="notas.html">Notas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="calendarios.html">Calendarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="disciplinas.html">Otras Disciplinas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="equipo.html">Equipo de Estacion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--FIN HEADER-->
+
+        <!--INICIO MAIN-->
+        <main class="row">
+            <h1 class="col-12 titulos p-3 text-center">
+                Estacion Roja y Blanca
+            </h1>
+
+            <div class="row">
+                <p class="equipoParrafo col-12 p-2 text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic maxime quibusdam ipsam, numquam asperiores placeat cupiditate neque porro quisquam optio sint, officiis debitis. Ipsam expedita impedit eum, dicta laboriosam iste!
+                </p>
+            </div>
+
+            <div class="row m-3">
+                <h2 class="col-12 titulos text-center">
+                    El equipo
+                </h2>
+            </div>
+
+            <section class="row d-flex justify-content-between m-2">
+                <div class="equipoMiembros col-4 p-5 d-flex flex-column">
+                    <img src="../img/equipo.png" alt="equipo" class="equipoFoto">
+                    <h3 class="equipoTitulo text-center">
+                        Facu Frigola
+                    </h3>
+                    <p class="notasParrafo text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque velit consectetur, ipsam cupiditate dolorum ex explicabo, alias quibusdam ad nihil eligendi, illum aperiam saepe laboriosam qui adipisci quos minus recusandae.
+                    </p>
+                </div>
+
+                <div class="equipoMiembros col-4 p-5 d-flex flex-column">
+                    <img src="../img/equipo.png" alt="equipo" class="equipoFoto">
+                    <h3 class="equipoTitulo text-center">
+                        Majo Sanchez
+                    </h3>
+                    <p class="notasParrafo text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque velit consectetur, ipsam cupiditate dolorum ex explicabo, alias quibusdam ad nihil eligendi, illum aperiam saepe laboriosam qui adipisci quos minus recusandae.
+                    </p>
+                </div>
+
+                <div class="equipoMiembros col-4 p-5 d-flex flex-column">
+                    <img src="../img/equipo.png" alt="equipo" class="equipoFoto">
+                    <h3 class="equipoTitulo text-center">
+                        Licha Uribe
+                    </h3>
+                    <p class="notasParrafo text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque velit consectetur, ipsam cupiditate dolorum ex explicabo, alias quibusdam ad nihil eligendi, illum aperiam saepe laboriosam qui adipisci quos minus recusandae.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <!--FIN MAIN-->
+
+        <!--INICIO FOOTER-->
+        <footer class="row p-3">
             <!--LOGO-->
-            <div class="headerLogo">
-                <a href="./index.html">
-                    <img src="../img/logo.png" alt="estacion" class="logo">
+            <img src="../img/logo.png" alt="logo" class="col-2 d-flex justify-content-start">
+
+            <!--RRSS-->
+            <div class="col-10 d-flex justify-content-end">
+                <!--TWITTER-->
+                <a href="https://twitter.com/erojayblanca" target="_blank">
+                    <img src="../img/twitter.png" alt="twitter" class="redes m-2">
+                </a>
+                <!--INSTAGRAM-->
+                <a href="https://www.instagram.com/estacionrojayblanca/" target="_blank">
+                    <img src="../img/instagram.png" alt="instagram" class="redes m-2">
+                </a>
+                <!--FACEBOOK-->
+                <a href="https://www.facebook.com/erojayblanca" target="_blank">
+                    <img src="../img/facebook.png" alt="facebook" class="redes m-2">
                 </a>
             </div>
-             
-
-                <!--MENU NAV-->
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="../index.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="notas.html">Notas</a>
-                        </li>
-                        <li>
-                            <a href="calendarios.html">Calendarios</a>
-                        </li>
-                        <li>
-                            <a href="disciplinas.html">Otras Disciplinas</a>
-                        </li>
-                        <li>
-                            <a href="equipo.html">Equipo de Estacion</a>
-                        </li>
-                    </ul>
-                </nav>                
-        </header>
-    <!--FIN HEADER-->
-
-
-    <!--INICIO MAIN-->
-    <h1 class="titulos">
-        Estacion roja y blanca
-        </h1>
-
-        <div class="equipo">
-
-            <p class="equipoParrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-            </p>
-        
-        </div>
-
-
-        <div class="equipo">
-            <h2 class="titulos">
-                El equipo
-            </h2>
-        </div>
-
-
-
-        <div class="equipoMiembros">
-
-            <img src="../img/equipo.png" alt="equipo" class="equipoFotos">
-
-            <h3 class="notasTitulo">Facu Frigola</h3>
-            <p class="notasParrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-            </p>
-
-        </div>
-
-        <div class="equipoMiembros">
-
-            <img src="../img/equipo.png" alt="equipo" class="equipoFotos">
-
-            <h3 class="notasTitulo">Majo Sanchez</h3>
-            <p class="notasParrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-            </p>
-            
-
-        </div>
-
-        <div class="equipoMiembros">
-
-            <img src="../img/equipo.png" alt="equipo" class="equipoFotos">
-
-            <h3 class="notasTitulo">Licha Uribe</h3>
-            <p class="notasParrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-            </p>
-        </div>   
-    <!--FIN MAIN-->
-
-
-    <!--INICIO FOOTER-->
-    <footer class="footerEquipo">            
-        <!--LOGO-->
-        <img src="../img/logo.png" alt="estacion" class="footerLogo">
-
-        <!--RRSS-->
-        <!--TWITTER-->
-        <a href="https://twitter.com/erojayblanca" target="_blank">
-            <img src="../img/twitter.png" alt="twitter" class="redes">
-        </a>
-        <!--INSTAGRAM-->
-        <a href="https://www.instagram.com/estacionrojayblanca/" target="_blank">
-            <img src="../img/instagram.png" alt="instagram" class="redes">
-        </a>
-        <!--FACEBOOK-->
-        <a href="https://www.facebook.com/erojayblanca" target="_blank">
-            <img src="../img/facebook.png" alt="facebook" class="redes">
-        </a>
-    </footer>
-    <!--FIN FOOTER-->
-
-
+        </footer>
+        <!--FIN FOOTER-->
+    </div>
     
+    <!--link js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
