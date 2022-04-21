@@ -14,15 +14,70 @@ a {
   text-decoration: none;
   color: whitesmoke; }
 
-.divBodyIndex .calendarioIndex, .divBodyIndex .sorteo {
-  object-fit: contain;
-  height: 15rem;
-  /*tranformaciones side*/ }
-  .divBodyIndex .calendarioIndex:hover, .divBodyIndex .sorteo:hover {
-    transform: scale(1.5);
-    transition: 1s; }
-  .divBodyIndex .calendarioIndex .calendarioIndexSm, .divBodyIndex .calendarioIndex .sorteoSm, .divBodyIndex .sorteo .calendarioIndexSm, .divBodyIndex .sorteo .sorteoSm {
-    height: 7rem; }
-
-.divBodyNotas, .divBodyCalendarios, .divBodyDisciplinas, .divBodyEquipo {
+.divBodyIndex {
   background-color: grey; }
+  .divBodyIndex .calendarioIndex, .divBodyIndex .sorteo {
+    object-fit: contain;
+    height: 15rem;
+    /*tranformaciones side*/ }
+    .divBodyIndex .calendarioIndex:hover, .divBodyIndex .sorteo:hover {
+      transform: scale(1.5);
+      transition: 1s; }
+    .divBodyIndex .calendarioIndex .calendarioIndexSm, .divBodyIndex .calendarioIndex .sorteoSm, .divBodyIndex .sorteo .calendarioIndexSm, .divBodyIndex .sorteo .sorteoSm {
+      height: 7rem; }
+  .divBodyIndex main h1, .divBodyIndex main h2 {
+    font-family: "Bebas Neue", cursive;
+    color: whitesmoke; }
+  .divBodyIndex main .novedadesParrafo {
+    color: black;
+    font-family: "Montserrat", sans-serif; }
+
+.divBodyNotas {
+  background-color: grey; }
+  .divBodyNotas main h1, .divBodyNotas main h2 {
+    font-family: "Bebas Neue", cursive;
+    color: whitesmoke; }
+  .divBodyNotas main .notasParrafo {
+    font-family: "Montserrat", sans-serif;
+    color: black; }
+
+.divBodyCalendarios {
+  background-color: grey; }
+  .divBodyCalendarios main h1 {
+    font-family: "Bebas Neue", cursive;
+    color: whitesmoke; }
+  .divBodyCalendarios main .fecha {
+    font-family: "Bebas Neue", cursive;
+    border-radius: 1rem;
+    background-color: whitesmoke; }
+  .divBodyCalendarios main .card:hover {
+    transform: scale(2.5);
+    transition: 1s; }
+
+.divBodyDisciplinas {
+  background-color: grey; }
+  .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+    font-family: "Bebas Neue", cursive;
+    color: whitesmoke; }
+  .divBodyDisciplinas main .disciplinasParrafo {
+    font-family: "Montserrat", sans-serif;
+    color: black; }
+
+.divBodyEquipo {
+  background-color: grey; }
+  .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3 {
+    font-family: "Bebas Neue", cursive;
+    color: whitesmoke; }
+  .divBodyEquipo main .equipoParrafo {
+    font-family: "Montserrat", sans-serif;
+    color: black; }
+
+footer {
+  border-top: solid 0.7rem whitesmoke;
+  background-color: #e0040b; }
+  footer .footerLogo {
+    height: 4rem; }
+  footer .redes {
+    height: 2rem; }
+    footer .redes:hover {
+      transform: scale(1.2); }

@@ -1,7 +1,13 @@
 @import "utilities/variables";
 @import "layout/nav";
 
+a{
+    text-decoration: none;
+    color: $colorSecundario;
+}
+
 .divBodyIndex{
+    background-color: $colorFondo;
     .calendarioIndex, .sorteo{
         object-fit: contain;
         height: 15rem;
@@ -14,10 +20,93 @@
             height: 7rem;
         }    
     }
+    main{
+        h1, h2{
+            font-family: $fontTitulos;
+            color: $colorSecundario;
+        }
+        .novedadesParrafo{
+            color: $colorParrafo;
+            font-family: $fontParrafo;
+        }
+    }
+}
+
+.divBodyNotas{
+    background-color: $colorFondo;
+    main{
+        h1, h2{
+            font-family: $fontTitulos;
+            color: $colorSecundario;
+        }
+        .notasParrafo{
+            font-family: $fontParrafo;
+            color: $colorParrafo;
+        }
+    }
 }
 
 
-
-.divBodyNotas, .divBodyCalendarios, .divBodyDisciplinas, .divBodyEquipo{
+.divBodyCalendarios{
     background-color: $colorFondo;
+    main{
+        h1{
+            font-family: $fontTitulos;
+            color: $colorSecundario;
+        }
+        .fecha{
+            font-family: $fontTitulos;
+            border-radius: 1rem;
+            background-color: $colorSecundario;
+        }
+        .card{
+            &:hover{
+                transform: scale(2.5);
+                transition: 1s;
+
+            }
+        }
+    }
+}
+
+.divBodyDisciplinas{
+    background-color: $colorFondo;
+    main{
+        h1, h2{
+            font-family: $fontTitulos;
+            color: $colorSecundario;
+        }
+        .disciplinasParrafo{
+            font-family: $fontParrafo;
+            color: $colorParrafo;
+        }
+    }
+}
+
+.divBodyEquipo{
+    background-color: $colorFondo;
+    main{
+        h1, h2, h3{
+            font-family: $fontTitulos;
+            color: $colorSecundario;
+        }
+        .equipoParrafo{
+            font-family: $fontParrafo;
+            color: $colorParrafo;
+        }
+    }
+}
+
+footer{
+    border-top: solid 0.7rem $colorSecundario;
+    background-color: $colorPrincipal; 
+    .footerLogo{
+        height: 4rem;
+    }
+    .redes{
+        height: 2rem;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }

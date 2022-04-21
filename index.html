@@ -57,72 +57,73 @@
         </header>
         <!--FIN HEADER-->
 
-
         <!--INICIO MAIN-->
-        
-        
-            <div class="titulos">
-                <h1>Novedades</h1>
-            </div>
+        <main class="row">    
+            <h1 class="titulos col-12 p-3">Novedades</h1>
 
-            <section class="novedades">
-
-                <div class="noticia">
-
-                    <img src="./img/noti1.jpg" alt="noti1" class="novedadesFoto">
-
-                    <h3 class="novedadesTitulo">
-                        Noti 1
-                    </h3>
-
-                    <p class="novedadesParrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-                    </p>                
+            <section class="novedades container-fluid d-flex flex-column m-1">
+                <div class="row p-3">
+                    <img src="./img/noti1.jpg" alt="noti1" class="col-sm-3 col-xxl-3 img-fluid">
+                    <h2 class="novedadesTitulo col-sm-2 col-xxl-2">
+                        Noticia 1
+                    </h2>
+                    <p class="novedadesParrafo col-sm-1 col-xxl-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsam officiis exercitationem voluptate, voluptatum molestias, repellat eaque earum facere iure ullam labore culpa reprehenderit praesentium nemo, ducimus adipisci laboriosam explicabo!
+                    </p>
+                    <div class="d-none d-xxl-block col-xxl-2 d-flex justify-content-center">
+                        <img src="./img/calendario.jpg" alt="calendario"  class="calendarioIndex img-fluid">
+                    </div>
                 </div>
-
-                <div class="noticia">
-                    <img src="./img/noti2.jpeg" alt="noti2" class="novedadesFoto">
-
-                    <h3 class="novedadesTitulo">
-                        Noti 2
-                    </h3>
-
-                    <p class="novedadesParrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio, quisquam tenetur velit nostrum et soluta rerum blanditiis ab optio similique vero. In temporibus labore itaque, corrupti ullam nulla dolorum?
-                    </p>                
+                
+                <div class="row p-3">
+                    <img src="./img/noti2.jpeg" alt="noti1" class="col-sm-3 col-xxl-3 img-fluid">
+                    <h2 class="novedadesTitulo col-sm-2 col-xxl-2">
+                        Noticia 2
+                    </h2>
+                    <p class="novedadesParrafo col-sm-1 col-xxl-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsam officiis exercitationem voluptate, voluptatum molestias, repellat eaque earum facere iure ullam labore culpa reprehenderit praesentium nemo, ducimus adipisci laboriosam explicabo!
+                    </p>
+                    <div class="d-none d-xxl-block col-xxl-2 d-flex justify-content-center">
+                        <img src="./img/sorteo.png" alt="sorteo"  class="sorteo img-fluid">
+                    </div>
                 </div>
             </section>
 
-
-            <section class="side">
-                <!--CALENDARIO-->
-                <img src="./img/calendario.jpg" alt="calendario" class="calendarioIndex">
-
-                <!--SORTEO-->
-                <img src="./img/sorteo.png" alt="instituto" class="sorteo">
+            <!--calendario y sorteo sm-->
+            <section class="container-fluid d-flex flex-column m-2">
+                <div class="d-xxl-none col-xxl-2 d-flex justify-content-center p-2">
+                    <img src="./img/calendario.jpg" alt="calendario"  class="calendarioIndexSm img-fluid">
+                </div>
+                <div class="d-xxl-none col-xxl-2 d-flex justify-content-center p-2">
+                    <img src="./img/sorteo.png" alt="sorteo"  class="sorteoSm img-fluid">
+                </div>
             </section>
+        </main>
         <!--FIN MAIN-->
 
-
         <!--INICIO FOOTER-->
-            <footer class="footerInicio">            
-                <!--LOGO-->
-                <img src="./img/logo.png" alt="estacion" class="footerLogo">
+        <footer class="row p-3">
+            <!--LOGO-->
+            <a href="index.html" class="col-sm-6 col-xxl-2 d-xs-flex justify-content-xs-center d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                <img src="./img/logo.png" alt="logo" class="footerLogo img-fluid">
+            </a>
 
-                <!--RRSS-->
+            <!--RRSS-->
+            <div class="col-sm-6 col-xxl-10 d-sm-flex justify-content-sm-center d-xxl-flex justify-content-xxl-end align-items-xxl-center">
                 <!--TWITTER-->
                 <a href="https://twitter.com/erojayblanca" target="_blank">
-                    <img src="./img/twitter.png" alt="twitter" class="redes">
+                    <img src="./img/twitter.png" alt="twitter" class="redes m-2 img-fluid">
                 </a>
                 <!--INSTAGRAM-->
                 <a href="https://www.instagram.com/estacionrojayblanca/" target="_blank">
-                    <img src="./img/instagram.png" alt="instagram" class="redes">
+                    <img src="./img/instagram.png" alt="instagram" class="redes m-2 img-fluid">
                 </a>
                 <!--FACEBOOK-->
                 <a href="https://www.facebook.com/erojayblanca" target="_blank">
-                    <img src="./img/facebook.png" alt="facebook" class="redes">
+                    <img src="./img/facebook.png" alt="facebook" class="redes m-2 img-fluid">
                 </a>
-            </footer>
+            </div>
+        </footer>
         <!--FIN FOOTER-->
     </div>
 
