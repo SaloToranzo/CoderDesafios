@@ -1,4 +1,7 @@
 @import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/extends";
+@import "utilities/mapas";
 @import "layout/nav";
 
 a{
@@ -13,8 +16,7 @@ a{
         height: 15rem;
         /*tranformaciones side*/
         &:hover{
-            transform: scale(1.5);
-            transition: 1s;
+            @include animacion
         }  
     .calendarioIndexSm, .sorteoSm{
             height: 7rem;
@@ -22,12 +24,10 @@ a{
     }
     main{
         h1, h2{
-            font-family: $fontTitulos;
-            color: $colorSecundario;
+            @extend %titulos;
         }
         .novedadesParrafo{
-            color: $colorParrafo;
-            font-family: $fontParrafo;
+            @extend %parrafos;
         }
     }
 }
@@ -36,12 +36,10 @@ a{
     background-color: $colorFondo;
     main{
         h1, h2{
-            font-family: $fontTitulos;
-            color: $colorSecundario;
+            @extend %titulos;
         }
         .notasParrafo{
-            font-family: $fontParrafo;
-            color: $colorParrafo;
+            @extend %parrafos;
         }
     }
 }
@@ -51,19 +49,16 @@ a{
     background-color: $colorFondo;
     main{
         h1{
-            font-family: $fontTitulos;
-            color: $colorSecundario;
+            @extend %titulos;
         }
         .fecha{
-            font-family: $fontTitulos;
+            font-family: map-get($map: $titulos, $key: titulo-font);
+            background-color: map-get($map: $titulos, $key: titulo-color );
             border-radius: 1rem;
-            background-color: $colorSecundario;
         }
         .card{
             &:hover{
-                transform: scale(2.5);
-                transition: 1s;
-
+                @include animacion;
             }
         }
     }
@@ -73,12 +68,10 @@ a{
     background-color: $colorFondo;
     main{
         h1, h2{
-            font-family: $fontTitulos;
-            color: $colorSecundario;
+            @extend %titulos;
         }
         .disciplinasParrafo{
-            font-family: $fontParrafo;
-            color: $colorParrafo;
+            @extend %parrafos;
         }
     }
 }
@@ -87,12 +80,10 @@ a{
     background-color: $colorFondo;
     main{
         h1, h2, h3{
-            font-family: $fontTitulos;
-            color: $colorSecundario;
+            @extend %titulos;
         }
         .equipoParrafo{
-            font-family: $fontParrafo;
-            color: $colorParrafo;
+            @extend %parrafos;
         }
     }
 }
@@ -106,7 +97,7 @@ footer{
     .redes{
         height: 2rem;
         &:hover{
-            transform: scale(1.2);
+            @include animacion;
         }
     }
 }

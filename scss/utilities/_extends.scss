@@ -1,0 +1,13 @@
+@import "utilities/variables";
+
+//titulos
+%titulos{
+    font-family: $fontTitulos;
+    color: $colorSecundario;
+}
+
+//parrafos
+%parrafos{
+    font-family: $fontParrafo;
+    color: $colorParrafo;
+}
