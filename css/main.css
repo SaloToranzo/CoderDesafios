@@ -6,7 +6,7 @@
   font-family: "Montserrat", sans-serif;
   color: black; }
 
-.divBodyIndex main, .divBodyNotas main {
+.divBodyIndex main, .divBodyNotas main, .divBodyDisciplinas main, .divBodyEquipo main {
   margin: 0.5rem;
   padding: 1rem; }
 
@@ -30,7 +30,7 @@ header {
   font-family: "Montserrat", sans-serif;
   color: black; }
 
-.divBodyIndex main, .divBodyNotas main {
+.divBodyIndex main, .divBodyNotas main, .divBodyDisciplinas main, .divBodyEquipo main {
   margin: 0.5rem;
   padding: 1rem; }
 
@@ -99,16 +99,60 @@ a {
   .divBodyCalendarios main .fecha {
     font-family: "Bebas Neue", cursive;
     background-color: whitesmoke;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    font-size: 80%; }
   .divBodyCalendarios main .card:hover {
     transform: scale(1.5);
     transition: 1s; }
 
 .divBodyDisciplinas {
-  background-color: grey; }
+  width: 100vw;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "titulos" "disciplinas" "footer";
+  gap: 1rem; }
+  .divBodyDisciplinas main .titulos {
+    grid-area: titulos; }
+  .divBodyDisciplinas main .disciplinas {
+    grid-area: disciplinas;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
+  .divBodyDisciplinas main .disciplinasFoto {
+    max-width: 70%; }
 
 .divBodyEquipo {
-  background-color: grey; }
+  width: 100vw;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "titulos" "estacionIntro" "equipo" "miembros" "footer";
+  gap: 1rem; }
+  .divBodyEquipo main .titulos {
+    grid-area: titulos; }
+  .divBodyEquipo main .estacionIntro {
+    grid-area: estacionIntro; }
+  .divBodyEquipo main .equipo {
+    grid-area: equipo; }
+  .divBodyEquipo main .miembros {
+    grid-area: miembros;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem; }
+  .divBodyEquipo main .equipoMiembros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
+  .divBodyEquipo main .equipoFoto {
+    max-width: 50%; }
 
 footer {
   border-top: solid 0.7rem whitesmoke;

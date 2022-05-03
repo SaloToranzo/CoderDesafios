@@ -29,7 +29,6 @@
 </head>
 
 <body>
-    <div class="divBodyDisciplinas">
         <!--INICIO HEADER-->
         <header class="row p-2">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -64,80 +63,67 @@
         </header>
         <!--FIN HEADER-->
 
-        <!--INICIO MAIN-->
-        <main class="row">
-            <h1 class="col-12 titulos p-3">
-                Otras Disciplinas
-            </h1>
-
-                <div class="disciplinas row m-3 p-4">
-                    <img src="../img/disciplinas.jpg" alt="disciplinasFoto" class="col-3">
-                
-                    <h2 class="disciplinasTitulo col-2">
-                        Patin
-                    </h2>
-                    <p class="disciplinasParrafo col-7">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum tempora quam assumenda atque culpa saepe maiores, et animi voluptate, quia commodi inventore harum perspiciatis aut porro illo ut cumque!
-                    </p>
-                </div>
-
-                <div class="disciplinas row m-3 p-4">
-                    <img src="../img/disciplinas.jpg" alt="disciplinasFoto" class="col-3">
-                
-                    <h2 class="disciplinasTitulo col-2">
-                        Cheer
-                    </h2>
-                    <p class="disciplinasParrafo col-7">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum tempora quam assumenda atque culpa saepe maiores, et animi voluptate, quia commodi inventore harum perspiciatis aut porro illo ut cumque!
-                    </p>
-                </div>
-
-                <div class="disciplinas row m-3 p-4">
-                    <img src="../img/disciplinas.jpg" alt="disciplinasFoto" class="col-3">
-                
-                    <h2 class="disciplinasTitulo col-2">
-                        Natacion
-                    </h2>
-                    <p class="disciplinasParrafo col-7">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum tempora quam assumenda atque culpa saepe maiores, et animi voluptate, quia commodi inventore harum perspiciatis aut porro illo ut cumque!
-                    </p>
-                </div>
-
-                <div class="disciplinas row m-3 p-4">
-                    <img src="../img/disciplinas.jpg" alt="disciplinasFoto" class="col-3">
-                
-                    <h2 class="disciplinasTitulo col-2">
-                        Voley
-                    </h2>
-                    <p class="disciplinasParrafo col-7">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum tempora quam assumenda atque culpa saepe maiores, et animi voluptate, quia commodi inventore harum perspiciatis aut porro illo ut cumque!
-                    </p>
-                </div>
-        </main>
-        <!--FIN MAIN-->
-
-        <!--INICIO FOOTER-->
-        <footer class="row p-3">
+        <div class="divBodyDisciplinas">
+            <!--INICIO MAIN-->
+            <main class="">
+                <h1 class="titulos">
+                    Otras Disciplinas
+                </h1>
+            
+                    <section class="disciplinas">
+                        <div class="voley">
+                            <img src="../img/voley.jpg" alt="voley" class="disciplinasFoto">
+                        
+                            <h2 class="disciplinasTitulo">
+                                Vóley: Instituto vs. La Calera
+                            </h2>
+                            <p class="disciplinasParrafo">
+                                Por la fecha 8 del Torneo Liga de Honor, los equipos gloriosos ganaron 5 de los 6 partidos disputados.
+                            </p>
+                        </div>
+                        
+                        <div class="futbolFem">
+                            <img src="../img/futbolfem.jpg" alt="futbol femenino" class="disciplinasFoto">
+                        
+                            <h2 class="disciplinasTitulo">
+                                Lourdes Francioni en Estación
+                            </h2>
+                            <p class="disciplinasParrafo">
+                                La jugadora del fútbol femenino nos cuenta sus sensaciones antes del partido frente a Racing de Nueva Italia.
+                            </p>
+                            <div>
+                                <iframe width="70%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FEstacionRyB%2Flourdes-francioni-en-estaci%C3%B3n%2F" frameborder="0" ></iframe>
+                            </div>
+                        </div>
+                    </section class="disciplinas">
+            </main>
+            <!--FIN MAIN-->
+            
+            <!--INICIO FOOTER-->
+        <footer class="">
             <!--LOGO-->
-            <img src="../img/logo.png" alt="logo" class="col-2 d-flex justify-content-start">
+            <a href="../index.html" class="">
+                <img src="../img/logo.png" alt="logo" class="footerLogo">
+            </a>
 
             <!--RRSS-->
-            <div class="col-10 d-flex justify-content-end">
+            <div class="">
                 <!--TWITTER-->
                 <a href="https://twitter.com/erojayblanca" target="_blank">
-                    <img src="../img/twitter.png" alt="twitter" class="redes m-2">
+                    <img src="../img/twitter.png" alt="twitter" class="redes">
                 </a>
                 <!--INSTAGRAM-->
                 <a href="https://www.instagram.com/estacionrojayblanca/" target="_blank">
-                    <img src="../img/instagram.png" alt="instagram" class="redes m-2">
+                    <img src="../img/instagram.png" alt="instagram" class="redes">
                 </a>
                 <!--FACEBOOK-->
                 <a href="https://www.facebook.com/erojayblanca" target="_blank">
-                    <img src="../img/facebook.png" alt="facebook" class="redes m-2">
+                    <img src="../img/facebook.png" alt="facebook" class="redes">
                 </a>
             </div>
         </footer>
         <!--FIN FOOTER-->
+        </div>
 
     <!--link js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

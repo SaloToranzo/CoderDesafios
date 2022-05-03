@@ -101,6 +101,7 @@ a{
             font-family: map-get($map: $titulos, $key: titulo-font);
             background-color: map-get($map: $titulos, $key: titulo-color );
             border-radius: 1rem;
+            font-size: 80%;
         }
         .card{
             &:hover{
@@ -111,20 +112,70 @@ a{
 }
 
 .divBodyDisciplinas{
+    width: 100vw;
     background-color: $colorFondo;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "titulos"
+                        "disciplinas"
+                        "footer";
+    gap: 1rem;
     main{
+        @extend %espacio;
+        .titulos{
+            grid-area: titulos;
+        }
+        .disciplinas{
+            grid-area: disciplinas;
+            @include flex(column, center, center, nowrap);
+        }
         h1, h2{
             @extend %titulos;
         }
         .disciplinasParrafo{
             @extend %parrafos;
         }
+        .disciplinasFoto{
+            max-width: 70%;
+        }
     }
 }
 
 .divBodyEquipo{
+    width: 100vw;
     background-color: $colorFondo;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "titulos"
+                        "estacionIntro"
+                        "equipo"
+                        "miembros"
+                        "footer";
+    gap: 1rem;
     main{
+        @extend %espacio;
+        .titulos{
+            grid-area: titulos;
+        }
+        .estacionIntro{
+            grid-area: estacionIntro;
+        }
+        .equipo{
+            grid-area: equipo;
+        }
+        .miembros{
+            grid-area: miembros;
+            @include flex(column, center, center, nowrap);
+            gap: 2rem;
+        }
+        .equipoMiembros{
+            @include flex(column, center, center, nowrap)
+        }
+        .equipoFoto{
+            max-width: 50%;
+        }
         h1, h2, h3{
             @extend %titulos;
         }
