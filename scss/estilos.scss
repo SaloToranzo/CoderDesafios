@@ -3,38 +3,84 @@
 @import "utilities/extends";
 @import "utilities/mapas";
 @import "layout/nav";
+@import "layout/grid";
 
+*{
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
     color: $colorSecundario;
 }
 
 .divBodyIndex{
+    width: 100vw;
     background-color: $colorFondo;
-    .calendarioIndex, .sorteo{
-        object-fit: contain;
-        height: 15rem;
-        /*tranformaciones side*/
-        &:hover{
-            @include animacion
-        }  
-    .calendarioIndexSm, .sorteoSm{
-            height: 7rem;
-        }    
-    }
-    main{
-        h1, h2{
-            @extend %titulos;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "titulos"
+                        "novedades"
+                        "side"
+                        "footer";
+    gap: 1rem;
+        main{
+            @extend %espacio;
+            .titulos{
+                grid-area: titulos;
+            }
+            .novedades{
+                grid-area: novedades;
+                @include flex(column, center, center, nowrap);
+                margin: 1rem;
+            }
+            h1, h2{
+                @extend %titulos;
+            }
+            .novedadesParrafo{
+                @extend %parrafos;
+            }
+            .novedadesFoto{
+                max-width: 70%;
+            }
+            .side{
+                grid-area: side;
+                gap: 2rem;
+                @include flex(column, center, center, nowrap);
+                .calendario, .sorteo{
+                    object-fit: contain;
+                    height: 10rem;
+                    /*tranformaciones side*/
+                    &:hover{
+                        @include animacion
+                    }
+                }
+            }
         }
-        .novedadesParrafo{
-            @extend %parrafos;
-        }
-    }
 }
 
+
 .divBodyNotas{
+    width: 100vw;
     background-color: $colorFondo;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "titulos"
+                        "notas"
+                        "footer";
+    gap: 1rem;
     main{
+        @extend %espacio;
+        .titulos{
+            grid-area: titulos;
+        }
+        .notas{
+            grid-area: notas;
+            @include flex(column, center, center, nowrap);
+        }
+
         h1, h2{
             @extend %titulos;
         }
@@ -90,12 +136,16 @@ a{
 
 footer{
     border-top: solid 0.7rem $colorSecundario;
-    background-color: $colorPrincipal; 
+    background-color: $colorPrincipal;
+    padding: 1rem;
+    grid-area: footer;
+    @include flex(row, space-between, end, nowrap);
     .footerLogo{
         height: 4rem;
     }
     .redes{
         height: 2rem;
+        margin: 0.3rem;
         &:hover{
             @include animacion;
         }

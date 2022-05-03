@@ -6,6 +6,10 @@
   font-family: "Montserrat", sans-serif;
   color: black; }
 
+.divBodyIndex main, .divBodyNotas main {
+  margin: 0.5rem;
+  padding: 1rem; }
+
 header {
   background-color: #e0040b;
   border-bottom: solid 0.7rem whitesmoke; }
@@ -18,24 +22,77 @@ header {
         transform: scale(1.2);
         text-decoration: underline; }
 
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3 {
+  font-family: "Bebas Neue", cursive;
+  color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyDisciplinas main .disciplinasParrafo, .divBodyEquipo main .equipoParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main {
+  margin: 0.5rem;
+  padding: 1rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
 a {
   text-decoration: none;
   color: whitesmoke; }
 
 .divBodyIndex {
-  background-color: grey; }
-  .divBodyIndex .calendarioIndex, .divBodyIndex .sorteo {
-    object-fit: contain;
-    height: 15rem;
-    /*tranformaciones side*/ }
-    .divBodyIndex .calendarioIndex:hover, .divBodyIndex .sorteo:hover {
-      transform: scale(1.5);
-      transition: 1s; }
-    .divBodyIndex .calendarioIndex .calendarioIndexSm, .divBodyIndex .calendarioIndex .sorteoSm, .divBodyIndex .sorteo .calendarioIndexSm, .divBodyIndex .sorteo .sorteoSm {
-      height: 7rem; }
+  width: 100vw;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "titulos" "novedades" "side" "footer";
+  gap: 1rem; }
+  .divBodyIndex main .titulos {
+    grid-area: titulos; }
+  .divBodyIndex main .novedades {
+    grid-area: novedades;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 1rem; }
+  .divBodyIndex main .novedadesFoto {
+    max-width: 70%; }
+  .divBodyIndex main .side {
+    grid-area: side;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
+    .divBodyIndex main .side .calendario, .divBodyIndex main .side .sorteo {
+      object-fit: contain;
+      height: 10rem;
+      /*tranformaciones side*/ }
+      .divBodyIndex main .side .calendario:hover, .divBodyIndex main .side .sorteo:hover {
+        transform: scale(1.5);
+        transition: 1s; }
 
 .divBodyNotas {
-  background-color: grey; }
+  width: 100vw;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "titulos" "notas" "footer";
+  gap: 1rem; }
+  .divBodyNotas main .titulos {
+    grid-area: titulos; }
+  .divBodyNotas main .notas {
+    grid-area: notas;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
 
 .divBodyCalendarios {
   background-color: grey; }
@@ -55,11 +112,19 @@ a {
 
 footer {
   border-top: solid 0.7rem whitesmoke;
-  background-color: #e0040b; }
+  background-color: #e0040b;
+  padding: 1rem;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: nowrap; }
   footer .footerLogo {
     height: 4rem; }
   footer .redes {
-    height: 2rem; }
+    height: 2rem;
+    margin: 0.3rem; }
     footer .redes:hover {
       transform: scale(1.5);
       transition: 1s; }
