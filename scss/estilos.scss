@@ -3,7 +3,6 @@
 @import "utilities/extends";
 @import "utilities/mapas";
 @import "layout/nav";
-@import "layout/grid";
 
 *{
     margin: 0;
@@ -25,6 +24,14 @@ a{
                         "side"
                         "footer";
     gap: 1rem;
+    @media screen and (min-width: 1200px){
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: "titulos titulos"
+        "novedades side"
+        "footer footer";
+    }
         main{
             @extend %espacio;
             .titulos{
@@ -79,13 +86,18 @@ a{
         .notas{
             grid-area: notas;
             @include flex(column, center, center, nowrap);
+            @media (min-width: 1200px){
+                @include flex (row, center, center, nowrap)
+            }
         }
-
         h1, h2{
             @extend %titulos;
         }
         .notasParrafo{
             @extend %parrafos;
+            @media (min-width: 1200px){
+                max-width: 50%;
+            }
         }
     }
 }
@@ -129,6 +141,9 @@ a{
         .disciplinas{
             grid-area: disciplinas;
             @include flex(column, center, center, nowrap);
+            @media (min-width: 1200px){
+                @include flex (row, start, center, nowrap)
+            }
         }
         h1, h2{
             @extend %titulos;
@@ -169,6 +184,9 @@ a{
             grid-area: miembros;
             @include flex(column, center, center, nowrap);
             gap: 2rem;
+            @media (min-width: 1200px){
+                @include flex(row, center, center, nowrap)
+            }
         }
         .equipoMiembros{
             @include flex(column, center, center, nowrap)

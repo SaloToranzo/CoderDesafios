@@ -22,18 +22,6 @@ header {
         transform: scale(1.2);
         text-decoration: underline; }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3 {
-  font-family: "Bebas Neue", cursive;
-  color: whitesmoke; }
-
-.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyDisciplinas main .disciplinasParrafo, .divBodyEquipo main .equipoParrafo {
-  font-family: "Montserrat", sans-serif;
-  color: black; }
-
-.divBodyIndex main, .divBodyNotas main, .divBodyDisciplinas main, .divBodyEquipo main {
-  margin: 0.5rem;
-  padding: 1rem; }
-
 * {
   margin: 0;
   padding: 0; }
@@ -49,6 +37,12 @@ a {
   grid-template-rows: auto;
   grid-template-areas: "titulos" "novedades" "side" "footer";
   gap: 1rem; }
+  @media screen and (min-width: 1200px) {
+    .divBodyIndex {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 80% 20%;
+      grid-template-areas: "titulos titulos" "novedades side" "footer footer"; } }
   .divBodyIndex main .titulos {
     grid-area: titulos; }
   .divBodyIndex main .novedades {
@@ -93,6 +87,16 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap; }
+    @media (min-width: 1200px) {
+      .divBodyNotas main .notas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; } }
+  @media (min-width: 1200px) {
+    .divBodyNotas main .notasParrafo {
+      max-width: 50%; } }
 
 .divBodyCalendarios {
   background-color: grey; }
@@ -121,6 +125,13 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap; }
+    @media (min-width: 1200px) {
+      .divBodyDisciplinas main .disciplinas {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap; } }
   .divBodyDisciplinas main .disciplinasFoto {
     max-width: 70%; }
 
@@ -145,6 +156,13 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     gap: 2rem; }
+    @media (min-width: 1200px) {
+      .divBodyEquipo main .miembros {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; } }
   .divBodyEquipo main .equipoMiembros {
     display: flex;
     flex-direction: column;
