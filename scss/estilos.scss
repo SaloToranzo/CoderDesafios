@@ -16,31 +16,27 @@ a{
 .divBodyIndex{
     width: 100vw;
     background-color: $colorFondo;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-                        "titulos"
-                        "novedades"
-                        "side"
-                        "footer";
-    gap: 1rem;
-    @media screen and (min-width: 1200px){
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: "titulos titulos"
-        "novedades side"
-        "footer footer";
-    }
+    @include flex(column, center, center, nowrap);
         main{
+            @media screen and (min-width: 1200px){
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: "titulos titulos"
+                                    "novedades side"
+                                    "footer footer";
+            }
             @extend %espacio;
             .titulos{
                 grid-area: titulos;
             }
+            
             .novedades{
                 grid-area: novedades;
                 @include flex(column, center, center, nowrap);
                 margin: 1rem;
+                .noti1, .noti2{
+                    margin: 2rem
+                }
             }
             h1, h2{
                 @extend %titulos;
@@ -51,16 +47,28 @@ a{
             .novedadesFoto{
                 max-width: 70%;
             }
-            .side{
+            aside{
                 grid-area: side;
                 gap: 2rem;
-                @include flex(column, center, center, nowrap);
-                .calendario, .sorteo{
+                @include flex(column, space-around, center, nowrap);
+                .partido{
+                    max-width: 12rem;
+                }
+                .partidoTexto{
+                    font-family: map-get($map: $titulos, $key: titulo-font);
+                    background-color: map-get($map: $titulos, $key: titulo-color );
+                    text-align: center;
+                    font-size: 2rem;
+                    border-radius: 1rem;
+                }
+                .calendario, .sorteo, .partidoImg{
                     object-fit: contain;
                     height: 10rem;
-                    /*tranformaciones side*/
-                    &:hover{
-                        @include animacion
+                    @media screen and (min-width:1200px) {
+                        height: 12rem;
+                        &:hover{
+                            @include animacion
+                        }
                     }
                 }
             }
@@ -71,23 +79,15 @@ a{
 .divBodyNotas{
     width: 100vw;
     background-color: $colorFondo;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-                        "titulos"
-                        "notas"
-                        "footer";
-    gap: 1rem;
     main{
         @extend %espacio;
-        .titulos{
-            grid-area: titulos;
-        }
         .notas{
-            grid-area: notas;
             @include flex(column, center, center, nowrap);
+            .notasDiv{
+                margin: 2rem;
+            }
             @media (min-width: 1200px){
-                @include flex (row, center, center, nowrap)
+                @include flex (row, center, start, nowrap)
             }
         }
         h1, h2{
@@ -95,9 +95,7 @@ a{
         }
         .notasParrafo{
             @extend %parrafos;
-            @media (min-width: 1200px){
-                max-width: 50%;
-            }
+            max-width: fit-content;
         }
     }
 }
@@ -111,13 +109,14 @@ a{
         }
         .fecha{
             font-family: map-get($map: $titulos, $key: titulo-font);
-            background-color: map-get($map: $titulos, $key: titulo-color );
-            border-radius: 1rem;
-            font-size: 80%;
         }
         .card{
-            &:hover{
-                @include animacion;
+            @media screen and (min-width: 1200px) {
+                .resultado{
+                    &:hover{
+                    @include animacion;
+                    }
+                }
             }
         }
     }
@@ -126,23 +125,15 @@ a{
 .divBodyDisciplinas{
     width: 100vw;
     background-color: $colorFondo;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-                        "titulos"
-                        "disciplinas"
-                        "footer";
-    gap: 1rem;
     main{
         @extend %espacio;
-        .titulos{
-            grid-area: titulos;
-        }
         .disciplinas{
-            grid-area: disciplinas;
             @include flex(column, center, center, nowrap);
+            .voley, .futbolFem{
+                margin: 2rem;
+            }
             @media (min-width: 1200px){
-                @include flex (row, start, center, nowrap)
+                @include flex (row, center, start, nowrap)
             }
         }
         h1, h2{
@@ -207,6 +198,7 @@ footer{
     border-top: solid 0.7rem $colorSecundario;
     background-color: $colorPrincipal;
     padding: 1rem;
+    width: 100vw;
     grid-area: footer;
     @include flex(row, space-between, end, nowrap);
     .footerLogo{

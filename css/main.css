@@ -18,9 +18,10 @@ header {
     header nav ul li {
       font-family: "Shadows Into Light", cursive;
       font-size: 1.5rem; }
-      header nav ul li:hover {
-        transform: scale(1.2);
-        text-decoration: underline; }
+      @media screen and (min-width: 1200px) {
+        header nav ul li:hover {
+          transform: scale(1.2);
+          text-decoration: underline; } }
 
 * {
   margin: 0;
@@ -33,15 +34,15 @@ a {
 .divBodyIndex {
   width: 100vw;
   background-color: grey;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "titulos" "novedades" "side" "footer";
-  gap: 1rem; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; }
   @media screen and (min-width: 1200px) {
-    .divBodyIndex {
+    .divBodyIndex main {
       display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 80% 20%;
+      grid-template-columns: 2fr 1fr;
       grid-template-areas: "titulos titulos" "novedades side" "footer footer"; } }
   .divBodyIndex main .titulos {
     grid-area: titulos; }
@@ -53,84 +54,83 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     margin: 1rem; }
+    .divBodyIndex main .novedades .noti1, .divBodyIndex main .novedades .noti2 {
+      margin: 2rem; }
   .divBodyIndex main .novedadesFoto {
     max-width: 70%; }
-  .divBodyIndex main .side {
+  .divBodyIndex main aside {
     grid-area: side;
     gap: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap; }
-    .divBodyIndex main .side .calendario, .divBodyIndex main .side .sorteo {
+    .divBodyIndex main aside .partido {
+      max-width: 12rem; }
+    .divBodyIndex main aside .partidoTexto {
+      font-family: "Bebas Neue", cursive;
+      background-color: whitesmoke;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 1rem; }
+    .divBodyIndex main aside .calendario, .divBodyIndex main aside .sorteo, .divBodyIndex main aside .partidoImg {
       object-fit: contain;
-      height: 10rem;
-      /*tranformaciones side*/ }
-      .divBodyIndex main .side .calendario:hover, .divBodyIndex main .side .sorteo:hover {
-        transform: scale(1.5);
-        transition: 1s; }
+      height: 10rem; }
+      @media screen and (min-width: 1200px) {
+        .divBodyIndex main aside .calendario, .divBodyIndex main aside .sorteo, .divBodyIndex main aside .partidoImg {
+          height: 12rem; }
+          .divBodyIndex main aside .calendario:hover, .divBodyIndex main aside .sorteo:hover, .divBodyIndex main aside .partidoImg:hover {
+            transform: scale(1.5);
+            transition: 1s; } }
 
 .divBodyNotas {
   width: 100vw;
-  background-color: grey;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "titulos" "notas" "footer";
-  gap: 1rem; }
-  .divBodyNotas main .titulos {
-    grid-area: titulos; }
+  background-color: grey; }
   .divBodyNotas main .notas {
-    grid-area: notas;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap; }
+    .divBodyNotas main .notas .notasDiv {
+      margin: 2rem; }
     @media (min-width: 1200px) {
       .divBodyNotas main .notas {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         flex-wrap: nowrap; } }
-  @media (min-width: 1200px) {
-    .divBodyNotas main .notasParrafo {
-      max-width: 50%; } }
+  .divBodyNotas main .notasParrafo {
+    max-width: fit-content; }
 
 .divBodyCalendarios {
   background-color: grey; }
   .divBodyCalendarios main .fecha {
-    font-family: "Bebas Neue", cursive;
-    background-color: whitesmoke;
-    border-radius: 1rem;
-    font-size: 80%; }
-  .divBodyCalendarios main .card:hover {
-    transform: scale(1.5);
-    transition: 1s; }
+    font-family: "Bebas Neue", cursive; }
+  @media screen and (min-width: 1200px) {
+    .divBodyCalendarios main .card .resultado:hover {
+      transform: scale(1.5);
+      transition: 1s; } }
 
 .divBodyDisciplinas {
   width: 100vw;
-  background-color: grey;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "titulos" "disciplinas" "footer";
-  gap: 1rem; }
-  .divBodyDisciplinas main .titulos {
-    grid-area: titulos; }
+  background-color: grey; }
   .divBodyDisciplinas main .disciplinas {
-    grid-area: disciplinas;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap; }
+    .divBodyDisciplinas main .disciplinas .voley, .divBodyDisciplinas main .disciplinas .futbolFem {
+      margin: 2rem; }
     @media (min-width: 1200px) {
       .divBodyDisciplinas main .disciplinas {
         display: flex;
         flex-direction: row;
-        justify-content: start;
-        align-items: center;
+        justify-content: center;
+        align-items: start;
         flex-wrap: nowrap; } }
   .divBodyDisciplinas main .disciplinasFoto {
     max-width: 70%; }
@@ -176,6 +176,7 @@ footer {
   border-top: solid 0.7rem whitesmoke;
   background-color: #e0040b;
   padding: 1rem;
+  width: 100vw;
   grid-area: footer;
   display: flex;
   flex-direction: row;

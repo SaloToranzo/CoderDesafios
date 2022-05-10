@@ -9,10 +9,14 @@ header{
             li{
                 font-family: $fontNav; 
                 font-size: 1.5rem;
-                &:hover{
-                    transform: scale(1.2);
-                    text-decoration: underline;
+                @media screen and (min-width: 1200px){
+                    &:hover{
+                        transform: scale(1.2);
+                        text-decoration: underline;
+                    }
+                    
                 }
+                
             }
         }
     }
