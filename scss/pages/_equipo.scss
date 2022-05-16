@@ -1,0 +1,50 @@
+@import "../utilities/extends";
+@import "../utilities/mapas";
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+.divBodyEquipo{
+    width: 100vw;
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "titulos"
+                        "estacionIntro"
+                        "equipo"
+                        "miembros"
+                        "footer";
+    gap: 1rem;
+    main{
+        @extend %espacio;
+        .titulos{
+            grid-area: titulos;
+        }
+        .estacionIntro{
+            grid-area: estacionIntro;
+        }
+        .equipo{
+            grid-area: equipo;
+        }
+        .miembros{
+            grid-area: miembros;
+            @include flex(column, center, center, nowrap);
+            gap: 2rem;
+            @media (min-width: 1200px){
+                @include flex(row, center, center, nowrap)
+            }
+        }
+        .equipoMiembros{
+            @include flex(column, center, center, nowrap)
+        }
+        .equipoFoto{
+            max-width: 50%;
+        }
+        h1, h2, h3{
+            @extend %titulos;
+        }
+        .equipoParrafo{
+            @extend %parrafos;
+        }
+    }
+}

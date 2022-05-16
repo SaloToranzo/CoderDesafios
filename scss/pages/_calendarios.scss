@@ -1,0 +1,25 @@
+@import "../utilities/extends";
+@import "../utilities/mapas";
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+.divBodyCalendarios{
+    background-color: $colorFondo;
+    main{
+        h1{
+            @extend %titulos;
+        }
+        .fecha{
+            font-family: map-get($map: $titulos, $key: titulo-font);
+        }
+        .card{
+            @media screen and (min-width: 1200px) {
+                .resultado{
+                    &:hover{
+                    @include animacion;
+                    }
+                }
+            }
+        }
+    }
+}

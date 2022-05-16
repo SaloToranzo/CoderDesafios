@@ -1,0 +1,68 @@
+@import "../utilities/extends";
+@import "../utilities/mapas";
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+
+
+.divBodyIndex{
+    width: 100vw;
+    background-color: $colorFondo;
+    @include flex(column, center, center, nowrap);
+        main{
+            @media screen and (min-width: 1200px){
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: "titulos titulos"
+                                    "novedades side"
+                                    "footer footer";
+            }
+            @extend %espacio;
+            .titulos{
+                grid-area: titulos;
+            }
+            
+            .novedades{
+                grid-area: novedades;
+                @include flex(column, center, center, nowrap);
+                margin: 1rem;
+                .noti1, .noti2{
+                    margin: 2rem
+                }
+            }
+            h1, h2{
+                @extend %titulos;
+            }
+            .novedadesParrafo{
+                @extend %parrafos;
+            }
+            .novedadesFoto{
+                max-width: 70%;
+            }
+            aside{
+                grid-area: side;
+                gap: 2rem;
+                @include flex(column, space-around, center, nowrap);
+                .partido{
+                    max-width: 12rem;
+                }
+                .asideTexto{
+                    font-family: map-get($map: $titulos, $key: titulo-font);
+                    background-color: map-get($map: $titulos, $key: titulo-color );
+                    text-align: center;
+                    font-size: 2rem;
+                    border-radius: 1rem;
+                }
+                .calendario, .sorteo, .partidoImg{
+                    object-fit: contain;
+                    height: 10rem;
+                    @media screen and (min-width:1200px) {
+                        height: 12rem;
+                        &:hover{
+                            @include animacion
+                        }
+                    }
+                }
+            }
+        }
+}

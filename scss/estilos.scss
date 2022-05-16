@@ -1,8 +1,20 @@
+//utilities
 @import "utilities/variables";
 @import "utilities/mixins";
 @import "utilities/extends";
 @import "utilities/mapas";
+
+//layout
 @import "layout/nav";
+@import "layout/footer";
+
+//pages
+@import "pages/index";
+@import "pages/notas";
+@import "pages/calendarios";
+@import "pages/equipo";
+
+
 
 *{
     margin: 0;
@@ -13,114 +25,13 @@ a{
     color: $colorSecundario;
 }
 
-.divBodyIndex{
-    width: 100vw;
-    background-color: $colorFondo;
-    @include flex(column, center, center, nowrap);
-        main{
-            @media screen and (min-width: 1200px){
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                grid-template-areas: "titulos titulos"
-                                    "novedades side"
-                                    "footer footer";
-            }
-            @extend %espacio;
-            .titulos{
-                grid-area: titulos;
-            }
-            
-            .novedades{
-                grid-area: novedades;
-                @include flex(column, center, center, nowrap);
-                margin: 1rem;
-                .noti1, .noti2{
-                    margin: 2rem
-                }
-            }
-            h1, h2{
-                @extend %titulos;
-            }
-            .novedadesParrafo{
-                @extend %parrafos;
-            }
-            .novedadesFoto{
-                max-width: 70%;
-            }
-            aside{
-                grid-area: side;
-                gap: 2rem;
-                @include flex(column, space-around, center, nowrap);
-                .partido{
-                    max-width: 12rem;
-                }
-                .partidoTexto{
-                    font-family: map-get($map: $titulos, $key: titulo-font);
-                    background-color: map-get($map: $titulos, $key: titulo-color );
-                    text-align: center;
-                    font-size: 2rem;
-                    border-radius: 1rem;
-                }
-                .calendario, .sorteo, .partidoImg{
-                    object-fit: contain;
-                    height: 10rem;
-                    @media screen and (min-width:1200px) {
-                        height: 12rem;
-                        &:hover{
-                            @include animacion
-                        }
-                    }
-                }
-            }
-        }
-}
 
 
-.divBodyNotas{
-    width: 100vw;
-    background-color: $colorFondo;
-    main{
-        @extend %espacio;
-        .notas{
-            @include flex(column, center, center, nowrap);
-            .notasDiv{
-                margin: 2rem;
-            }
-            @media (min-width: 1200px){
-                @include flex (row, space-between, start, nowrap)
-            }
-        }
-        h1, h2{
-            @extend %titulos;
-        }
-        .notasParrafo{
-            @extend %parrafos;
-            max-width: fit-content;
-        }
-    }
-}
 
 
-.divBodyCalendarios{
-    background-color: $colorFondo;
-    main{
-        h1{
-            @extend %titulos;
-        }
-        .fecha{
-            font-family: map-get($map: $titulos, $key: titulo-font);
-        }
-        .card{
-            @media screen and (min-width: 1200px) {
-                .resultado{
-                    &:hover{
-                    @include animacion;
-                    }
-                }
-            }
-        }
-    }
-}
+
+
+
 
 .divBodyDisciplinas{
     width: 100vw;
@@ -148,67 +59,5 @@ a{
     }
 }
 
-.divBodyEquipo{
-    width: 100vw;
-    background-color: $colorFondo;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-                        "titulos"
-                        "estacionIntro"
-                        "equipo"
-                        "miembros"
-                        "footer";
-    gap: 1rem;
-    main{
-        @extend %espacio;
-        .titulos{
-            grid-area: titulos;
-        }
-        .estacionIntro{
-            grid-area: estacionIntro;
-        }
-        .equipo{
-            grid-area: equipo;
-        }
-        .miembros{
-            grid-area: miembros;
-            @include flex(column, center, center, nowrap);
-            gap: 2rem;
-            @media (min-width: 1200px){
-                @include flex(row, center, center, nowrap)
-            }
-        }
-        .equipoMiembros{
-            @include flex(column, center, center, nowrap)
-        }
-        .equipoFoto{
-            max-width: 50%;
-        }
-        h1, h2, h3{
-            @extend %titulos;
-        }
-        .equipoParrafo{
-            @extend %parrafos;
-        }
-    }
-}
 
-footer{
-    border-top: solid 0.7rem $colorSecundario;
-    background-color: $colorPrincipal;
-    padding: 1rem;
-    width: 100vw;
-    grid-area: footer;
-    @include flex(row, space-between, end, nowrap);
-    .footerLogo{
-        height: 4rem;
-    }
-    .redes{
-        height: 2rem;
-        margin: 0.3rem;
-        &:hover{
-            @include animacion;
-        }
-    }
-}
+

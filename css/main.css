@@ -1,12 +1,12 @@
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
-.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyDisciplinas main .disciplinasParrafo, .divBodyEquipo main .equipoParrafo {
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
   font-family: "Montserrat", sans-serif;
   color: black; }
 
-.divBodyIndex main, .divBodyNotas main, .divBodyDisciplinas main, .divBodyEquipo main {
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
   margin: 0.5rem;
   padding: 1rem; }
 
@@ -23,13 +23,49 @@ header {
           transform: scale(1.2);
           text-decoration: underline; } }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-a {
-  text-decoration: none;
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
+
+footer {
+  border-top: solid 0.7rem whitesmoke;
+  background-color: #e0040b;
+  padding: 1rem;
+  width: 100vw;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: nowrap; }
+  footer .footerLogo {
+    height: 4rem; }
+  footer .redes {
+    height: 2rem;
+    margin: 0.3rem; }
+    footer .redes:hover {
+      transform: scale(1.5);
+      transition: 1s; }
+
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
+  color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
 
 .divBodyIndex {
   width: 100vw;
@@ -68,7 +104,7 @@ a {
     flex-wrap: nowrap; }
     .divBodyIndex main aside .partido {
       max-width: 12rem; }
-    .divBodyIndex main aside .partidoTexto {
+    .divBodyIndex main aside .asideTexto {
       font-family: "Bebas Neue", cursive;
       background-color: whitesmoke;
       text-align: center;
@@ -83,6 +119,18 @@ a {
           .divBodyIndex main aside .calendario:hover, .divBodyIndex main aside .sorteo:hover, .divBodyIndex main aside .partidoImg:hover {
             transform: scale(1.5);
             transition: 1s; } }
+
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
+  color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
 
 .divBodyNotas {
   width: 100vw;
@@ -105,6 +153,18 @@ a {
   .divBodyNotas main .notasParrafo {
     max-width: fit-content; }
 
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
+  color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
+
 .divBodyCalendarios {
   background-color: grey; }
   .divBodyCalendarios main .fecha {
@@ -114,26 +174,17 @@ a {
       transform: scale(1.5);
       transition: 1s; } }
 
-.divBodyDisciplinas {
-  width: 100vw;
-  background-color: grey; }
-  .divBodyDisciplinas main .disciplinas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; }
-    .divBodyDisciplinas main .disciplinas .voley, .divBodyDisciplinas main .disciplinas .futbolFem {
-      margin: 2rem; }
-    @media (min-width: 1200px) {
-      .divBodyDisciplinas main .disciplinas {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-        flex-wrap: nowrap; } }
-  .divBodyDisciplinas main .disciplinasFoto {
-    max-width: 70%; }
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
+  color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
 
 .divBodyEquipo {
   width: 100vw;
@@ -172,22 +223,31 @@ a {
   .divBodyEquipo main .equipoFoto {
     max-width: 50%; }
 
-footer {
-  border-top: solid 0.7rem whitesmoke;
-  background-color: #e0040b;
-  padding: 1rem;
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: whitesmoke; }
+
+.divBodyDisciplinas {
   width: 100vw;
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
-  flex-wrap: nowrap; }
-  footer .footerLogo {
-    height: 4rem; }
-  footer .redes {
-    height: 2rem;
-    margin: 0.3rem; }
-    footer .redes:hover {
-      transform: scale(1.5);
-      transition: 1s; }
+  background-color: grey; }
+  .divBodyDisciplinas main .disciplinas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
+    .divBodyDisciplinas main .disciplinas .voley, .divBodyDisciplinas main .disciplinas .futbolFem {
+      margin: 2rem; }
+    @media (min-width: 1200px) {
+      .divBodyDisciplinas main .disciplinas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: nowrap; } }
+  .divBodyDisciplinas main .disciplinasFoto {
+    max-width: 70%; }
