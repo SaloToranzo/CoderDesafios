@@ -12,6 +12,7 @@
             @include flex(column, center, center, nowrap);
             .notasDiv{
                 margin: 2rem;
+                max-width: 20rem;
             }
             @media (min-width: 1200px){
                 @include flex (row, space-between, start, nowrap)
