@@ -21,7 +21,6 @@
             .titulos{
                 grid-area: titulos;
             }
-            
             .novedades{
                 grid-area: novedades;
                 @include flex(column, center, center, nowrap);
@@ -32,6 +31,10 @@
             }
             h1, h2{
                 @extend %titulos;
+            }
+            a{
+                text-decoration: none;
+                color: $colorSecundario
             }
             .novedadesParrafo{
                 @extend %parrafos;

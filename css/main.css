@@ -1,4 +1,4 @@
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -23,7 +23,7 @@ header {
           transform: scale(1.2);
           text-decoration: underline; } }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -55,7 +55,7 @@ footer {
       transform: scale(1.5);
       transition: 1s; }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -92,6 +92,9 @@ footer {
     margin: 1rem; }
     .divBodyIndex main .novedades .noti1, .divBodyIndex main .novedades .noti2, .divBodyIndex main .novedades .noti3, .divBodyIndex main .novedades .noti4 {
       margin: 2rem; }
+  .divBodyIndex main a {
+    text-decoration: none;
+    color: whitesmoke; }
   .divBodyIndex main .novedadesFoto {
     max-width: 70%; }
   .divBodyIndex main aside {
@@ -146,7 +149,7 @@ footer {
       .divBodyIndex main aside .asideMixcloud span {
         display: block; }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -180,7 +183,7 @@ footer {
   .divBodyNotas main .notasParrafo {
     max-width: fit-content; }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -195,13 +198,16 @@ footer {
 .divBodyCalendarios {
   background-color: grey; }
   .divBodyCalendarios main .fecha {
-    font-family: "Bebas Neue", cursive; }
-  @media screen and (min-width: 1200px) {
-    .divBodyCalendarios main .card .resultado:hover {
-      transform: scale(1.5);
-      transition: 1s; } }
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.5rem; }
+  .divBodyCalendarios main .card {
+    max-width: 10rem; }
+    @media screen and (min-width: 1200px) {
+      .divBodyCalendarios main .card .resultado:hover {
+        transform: scale(1.5);
+        transition: 1s; } }
 
-.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
 
@@ -215,19 +221,10 @@ footer {
 
 .divBodyEquipo {
   width: 100vw;
-  background-color: grey;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "titulos" "estacionIntro" "equipo" "miembros" "footer";
-  gap: 1rem; }
-  .divBodyEquipo main .titulos {
-    grid-area: titulos; }
-  .divBodyEquipo main .estacionIntro {
-    grid-area: estacionIntro; }
-  .divBodyEquipo main .equipo {
-    grid-area: equipo; }
+  background-color: grey; }
+  .divBodyEquipo main .equipoParrafo {
+    text-align: center; }
   .divBodyEquipo main .miembros {
-    grid-area: miembros;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,6 +238,15 @@ footer {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap; } }
+    .divBodyEquipo main .miembros .equipoRedes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; }
+      .divBodyEquipo main .miembros .equipoRedes .equipoRrss {
+        height: 2rem;
+        padding: 0.2rem; }
   .divBodyEquipo main .equipoMiembros {
     display: flex;
     flex-direction: column;
@@ -248,15 +254,20 @@ footer {
     align-items: center;
     flex-wrap: nowrap; }
   .divBodyEquipo main .equipoFoto {
-    max-width: 50%; }
+    height: 10rem;
+    margin: 1rem; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-a {
-  text-decoration: none;
+.divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
+  font-family: "Bebas Neue", cursive;
   color: whitesmoke; }
+
+.divBodyIndex main .novedadesParrafo, .divBodyIndex main aside .asideImpacto .asideTextoImpacto, .divBodyNotas main .notasParrafo, .divBodyEquipo main .equipoParrafo, .divBodyDisciplinas main .disciplinasParrafo {
+  font-family: "Montserrat", sans-serif;
+  color: black; }
+
+.divBodyIndex main, .divBodyNotas main, .divBodyEquipo main, .divBodyDisciplinas main {
+  margin: 0.5rem;
+  padding: 1rem; }
 
 .divBodyDisciplinas {
   width: 100vw;
