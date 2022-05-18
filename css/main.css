@@ -148,6 +148,23 @@ footer {
       flex-wrap: nowrap; }
       .divBodyIndex main aside .asideMixcloud span {
         display: block; }
+    .divBodyIndex main aside .whatsapp {
+      position: fixed;
+      bottom: 8rem;
+      right: 1rem; }
+      @media screen and (min-width: 1200px) {
+        .divBodyIndex main aside .whatsapp {
+          bottom: 8rem;
+          right: 3rem; } }
+      .divBodyIndex main aside .whatsapp .whatsappIcono {
+        height: 3rem; }
+        @media screen and (min-width: 768px) {
+          .divBodyIndex main aside .whatsapp .whatsappIcono {
+            height: 5rem; } }
+        @media screen and (min-width: 1200px) {
+          .divBodyIndex main aside .whatsapp .whatsappIcono:hover {
+            transform: scale(1.5);
+            transition: 1s; } }
 
 .divBodyIndex main h1, .divBodyIndex main h2, .divBodyNotas main h1, .divBodyNotas main h2, .divBodyCalendarios main h1, .divBodyEquipo main h1, .divBodyEquipo main h2, .divBodyEquipo main h3, .divBodyEquipo main h4, .divBodyDisciplinas main h1, .divBodyDisciplinas main h2 {
   font-family: "Bebas Neue", cursive;
