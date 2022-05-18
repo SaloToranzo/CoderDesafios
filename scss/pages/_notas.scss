@@ -4,7 +4,6 @@
 @import "../utilities/variables";
 
 .divBodyNotas{
-    width: 100vw;
     background-color: $colorFondo;
     main{
         @extend %espacio;

@@ -8,8 +8,8 @@ footer{
     border-top: solid 0.7rem $colorSecundario;
     background-color: $colorPrincipal;
     padding: 1rem;
-    width: 100vw;
     grid-area: footer;
+    width: 100%;
     @include flex(row, space-between, end, nowrap);
     .footerLogo{
         height: 4rem;
@@ -21,4 +21,7 @@ footer{
             @include animacion;
         }
     }
+}
+.footerBootstrap{
+    position: absolute;
 }

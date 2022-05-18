@@ -3,10 +3,7 @@
 @import "../utilities/mixins";
 @import "../utilities/variables";
 
-
-
 .divBodyIndex{
-    width: 100vw;
     background-color: $colorFondo;
     @include flex(column, center, center, nowrap);
         main{
